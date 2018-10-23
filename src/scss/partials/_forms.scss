@@ -1,0 +1,109 @@
+
+.select-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 6px;
+}
+.select-form-fieldset {
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  padding: 10px;
+}
+.select-form-selector {
+  width: 300px;
+  height: 30px;
+  background-color: #E8E8E8;
+  border: 1px solid gray;
+  border-radius: 3%;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-decoration: none;
+  text-align-last: center;
+  //margin-top: 10px;
+  margin-bottom: 10px;
+}
+.select-form-selector-option {
+
+}
+.btn-next {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  background-color: #87ceeb;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:#666666;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-next:hover {
+  background-color:#db3b3b;
+}
+.btn-next:active {
+  position:relative;
+  top:1px;
+}
+.box {
+  width: 300px;
+  border: 1px solid lightgray;
+  margin: 0 auto;
+
+}
+.map {
+  height: 150px;
+}
+.exercises {
+  height: 140px;
+}
+.summary {
+  width: 320px;
+  height: 500px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.main-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.passes, .shots, .plays {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.main-part-item {
+  width: 90px;
+  height: 90px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  text-align: center;
+  p {
+    top: 35%;
+    position: relative;
+  }
+}
+.main-part-exercise-details {
+  height: 380px;
+}
