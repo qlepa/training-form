@@ -11,7 +11,12 @@ class CourseDetail extends React.Component {
    }
 
    }
-
+    handleClick = () => {
+        if(typeof this.props.getAgeGroup == 'function') {
+            this.props.getAgeGroup(this.state.ageGroup)
+        }
+        this.props.setStage('FirstPart')
+    }
    render(){
        let trainers = this.state.trainers.map((e,i) => {
            return <option key={i} className="select-form-selector-option">{e.Name}</option>
@@ -52,7 +57,7 @@ class CourseDetail extends React.Component {
                          <div className="box map"></div>
                  </fieldset>
              </form>
-             <button className="btn-next">DALEJ</button>
+             <button onClick={this.handleClick} className="btn-next">DALEJ</button>
          </section>
 
      )

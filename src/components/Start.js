@@ -18,6 +18,8 @@ class Start extends React.Component {
         if(typeof this.props.getAgeGroup == 'function') {
             this.props.getAgeGroup(this.state.ageGroup)
         }
+        this.props.setStage('CourseDetails')
+
     }
     render(){
         return (
