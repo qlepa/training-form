@@ -6,13 +6,17 @@ class CourseDetail extends React.Component {
    constructor(props) {
    super(props);
    this.state = {
-       trainers: []
+       trainers: [],
+       assistans: []
    }
 
    }
 
    render(){
        let trainers = this.state.trainers.map((e,i) => {
+           return <option key={i} className="select-form-selector-option">{e.Name}</option>
+       })
+       let assistans = this.state.assistans.map((e,i) => {
            return <option key={i} className="select-form-selector-option">{e.Name}</option>
        })
      return (
@@ -24,16 +28,12 @@ class CourseDetail extends React.Component {
                  <fieldset className="select-form-fieldset">
                      <legend>Kadra</legend>
                      <select className="select-form-selector">
-                         <option className="select-form-selector-option">--------</option>
+                         <option className="select-form-selector-option first">Trener prowadzący</option>
                          {trainers}
                      </select>
                      <select className="select-form-selector">
-                         <option className="select-form-selector-option">Asystent</option>
-                         <option className="select-form-selector-option">Junior A-C</option>
-                         <option className="select-form-selector-option">Junior D</option>
-                         <option className="select-form-selector-option">Junior E</option>
-                         <option className="select-form-selector-option">Junior F</option>
-                         <option className="select-form-selector-option">Junior G</option>
+                         <option className="select-form-selector-option first">Asystent</option>
+                         {assistans}
                      </select>
                  </fieldset>
              </form>
@@ -42,7 +42,7 @@ class CourseDetail extends React.Component {
                      <legend>Szczegóły zajęć</legend>
                      <input type="date" className="select-form-selector"/>
                          <select className="select-form-selector">
-                             <option className="select-form-selector-option">Miejsce zajeć</option>
+                             <option className="select-form-selector-option first">Miejsce zajeć</option>
                              <option className="select-form-selector-option">Hala Deotymy</option>
                              <option className="select-form-selector-option">Junior D</option>
                              <option className="select-form-selector-option">Junior E</option>
@@ -66,6 +66,19 @@ class CourseDetail extends React.Component {
                this.setState({
                    trainers: [
                        ...this.state.trainers,
+                       e.data()
+                   ]
+               })
+           });
+       })
+       db.collection('assistans').get().then((snap) => {
+           console.log(snap.docs);
+
+           snap.docs.forEach((e) => {
+               console.log(e.data());
+               this.setState({
+                   assistans: [
+                       ...this.state.assistans,
                        e.data()
                    ]
                })

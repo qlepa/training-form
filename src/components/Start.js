@@ -13,7 +13,6 @@ class Start extends React.Component {
         this.setState ({
             ageGroup: e.target.value
         })
-        console.log(this.state.ageGroup);
     }
     handleClick = () => {
         if(typeof this.props.getAgeGroup == 'function') {
@@ -28,7 +27,7 @@ class Start extends React.Component {
                     <h2>Wybierz kategorię wiekową</h2>
                     <form className="select-form">
                         <select className="select-form-selector" id='ageGroup' value={this.state.ageGroup} onChange={this.handleAgeGroup}>
-                            <option className="select-form-selector-option">--------</option>
+                            <option className="select-form-selector-option first">Wybierz grupę wiekową</option>
                             <option className="select-form-selector-option">Junior A-C</option>
                             <option className="select-form-selector-option">Junior D</option>
                             <option className="select-form-selector-option">Junior E</option>
