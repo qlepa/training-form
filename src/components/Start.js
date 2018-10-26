@@ -1,5 +1,4 @@
 import React from "react";
-import App from "./App";
 
 class Start extends React.Component {
     constructor(props) {
